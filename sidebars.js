@@ -19,44 +19,122 @@ const sidebars = {
     'introduccion',
     {
       type: 'category',
-      label: 'Capacitación Vendedores',
+      label: 'Capacitación a Vendedores',
       items: [
-        'capacitacion-vendedores',
         {
           type: 'category',
           label: '1. Introducción',
-          items: ['capacitacion-vendedores']
+          items: [
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/bienvenida',
+              label: '• Bienvenida',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/quienes-somos',
+              label: '• Quienes somos',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/que-vendemos',
+              label: '• Qué vendemos',
+            },
+          ],
         },
         {
           type: 'category',
           label: '2. Producto',
-          items: ['capacitacion-vendedores']
+          items: [
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/explicacion-general',
+              label: '• Explicación general',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/arquitectura-tecnica',
+              label: '• Arquitectura técnica',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/caracteristicas-clave',
+              label: '• Características clave',
+            },
+          ],
         },
         {
           type: 'category',
           label: '3. Protocolos',
-          items: ['capacitacion-vendedores']
+          items: [
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/ftp',
+              label: '• FTP',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/rtsp',
+              label: '• RTSP',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/hibrido',
+              label: '• Híbrido',
+            },
+          ],
         },
         {
           type: 'category',
-          label: '4. Público Objetivo',
-          items: ['capacitacion-vendedores']
+          label: '4. Público de Venta Objetivo',
+          items: [
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/negocios-pequenos',
+              label: '• Negocios pequeños',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/comercios-medianos',
+              label: '• Comercios medianos',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/empresas-grandes',
+              label: '• Empresas grandes',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/hogares',
+              label: '• Hogares',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/clientes-con-camaras',
+              label: '• Clientes con cámaras',
+            },
+            {
+              type: 'doc',
+              id: 'capacitacion-vendedores/clientes-con-problemas-previos',
+              label: '• Clientes con problemas previos',
+            },
+          ],
         },
         {
-          type: 'category',
+          type: 'doc',
+          id: 'capacitacion-vendedores/objeciones-comunes',
           label: '5. Objeciones Comunes',
-          items: ['capacitacion-vendedores']
         },
         {
           type: 'doc',
-          id: 'capacitacion-vendedores',
-          label: '6. Alta de Cámaras'
+          id: 'capacitacion-vendedores/alta-de-camaras',
+          label: '6. Alta de cámaras',
         },
         {
           type: 'doc',
-          id: 'capacitacion-vendedores',
-          label: '7. Consideraciones Generales'
-        }
+          id: 'capacitacion-vendedores/consideraciones-generales',
+          label: '7. Consideraciones Generales',
+        },
       ]
     }
   ],
