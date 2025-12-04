@@ -17,6 +17,8 @@
 const sidebars = {
   tutorialSidebar: [
     'introduccion',
+    'requerimientos-monitorcenter',
+    'guia-elegir-camara',
     {
       type: 'category',
       label: 'Capacitación a Vendedores',
