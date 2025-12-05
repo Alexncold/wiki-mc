@@ -7,7 +7,11 @@ sidebar_label: Guía para elegir una cámara de seguridad
 
 ¿Estás necesitando un sistema de vigilancia para tu casa, pero hay demasiadas opciones para elegir? ¿Debes llamar a un técnico instalador o la podrías configurar tú mismo en tu hogar? Y lo más importante, ¡el precio! ¿Cuánto voy a gastar en comprar un equipo completo? Para hallar respuesta a todas esas preguntas, mira nuestra guía a continuación sobre la mejor opción en cámaras de seguridad para casa.
 
-<!-- Image: familia en hogar con camaras de seguridad -->
+<div style={{display: 'flex', justifyContent: 'center'}}>
+
+<img src="https://monitor-center.com/wp-content/uploads/2021/09/10048-1280x800@2x.jpg" alt="Familia en hogar con cámaras de seguridad" style={{width: '60%'}} />
+
+</div>
 
 Para proteger nuestro hogar, para sentirnos más seguros o simplemente para tener un respaldo, un sistema de cámaras de seguridad es una gran inversión para nuestro domicilio, siempre y cuando sepamos qué estamos comprando.
 
@@ -17,7 +21,11 @@ Hay numerosas opciones en el mercado de la videovigilancia, que van desde cámar
 
 En principio, el lente de la cámara, y más precisamente el ángulo de visión. Sean analógicas o digitales IP, deberíamos buscar una cámara de seguridad con una amplitud de ángulo de **2.8mm**, en contraposición de 3.6mm. Un lente con este tipo de ángulo nos va a permitir un mayor "barrido" de imagen, es decir, vamos a tener una imagen más completa del panorama y cubrirá zonas que un lente de 3.6mm no logre alcanzar.
 
-<!-- Image: configuracion de camaras de seguridad en casa -->
+<div style={{display: 'flex', justifyContent: 'center'}}>
+
+<img src="https://monitor-center.com/wp-content/uploads/2021/09/ip-vs-dvr-scaled.jpg" alt="Configuración de cámaras de seguridad en casa" style={{width: '40%'}} />
+
+</div>
 
 ## Punto 2 – Grabaciones de cámaras en casa
 
@@ -27,7 +35,11 @@ Por esto se debe tener siempre en cuenta el "cómo", al momento de grabar. Si va
 
 ¿Tienes una cámara IP o un DVR que no graba? No te preocupes, todo tiene solución! Revisa este post sobre como grabar en la nube tu cámara de seguridad.
 
-<!-- Image: monitor-center -->
+<div style={{display: 'flex', justifyContent: 'center'}}>
+
+<img src="https://i.ibb.co/6F2rf3w/Logo-2.png" alt="Monitor Center Logo" style={{width: '30%'}} />
+
+</div>
 
 ## Punto 3 – Cámaras conectadas y seguras
 
@@ -37,7 +49,11 @@ Considera entonces la ubicación de tu módem o router, y fíjate cómo llegará
 
 Y si vas a instalar todo IP, también tienes que prever las entradas de red. Un módem básico suele traer entre 4 y 5 bocas, así que corrobora cuántos dispositivos tienes conectados a internet, podría ser que necesites un switch de red extra para tus cámaras de seguridad.
 
-<!-- Image: utilizando sistema de camaras wifi -->
+<div style={{display: 'flex', justifyContent: 'center'}}>
+
+![Conectividad de cámaras de seguridad](https://monitor-center.com/wp-content/uploads/2021/09/conectividad-1280x1226@2x.jpg)
+
+</div>
 
 :::tip
 "Considera entonces la ubicación de tu módem o router, y fíjate cómo llegarán los cables de las cámaras hasta allí"
