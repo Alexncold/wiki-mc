@@ -1,9 +1,49 @@
 .features {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding: 2rem 0;
   width: 100%;
+  gap: 2rem;
 }
+
+.featureCard {
+  background-color: #f1f3f5; /* Fondo gris claro */
+  border: none;
+  border-radius: 6px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Sombra muy sutil */
+  margin: 10px; /* Aumentamos el margen para el borde */
+  position: relative;
+}
+
+/* Borde con espacio reducido */
+.featureCard {
+  transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid #4a90e2; /* Borde azul */
+  border-radius: 8px;
+  pointer-events: none; /* Para que no interfiera con los clics */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover */
+.featureCard:hover::before {
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border-width: 3px; /* Aumenta el grosor del borde */
+}
+
 
 .featureImage {
   height: 150px;
@@ -15,4 +55,49 @@
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.imageBlock {
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  margin: 10px;
+}
+
+.fullWidthImage {
+  max-width: 60%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.signupText {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1a5f8e;
+}
+
+.signupLink {
+  font-size: 1.1rem;
+  color: #1a5f8e;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signupButton {
+  display: inline-block;
+  background-color: #e6f3ff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.signupButton:hover {
+  background-color: #cce7ff;
+}
+
+.signupLink:hover {
+  text-decoration: none;
 }

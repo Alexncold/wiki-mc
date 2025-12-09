@@ -35,16 +35,18 @@ const FeatureList = [
 function Feature({image, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <img 
-          src={image} 
-          className={styles.featureImage} 
-          alt={title} 
-        />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div className={styles.featureCard}>
+        <div className="text--center">
+          <img 
+            src={image} 
+            className={styles.featureImage} 
+            alt={title} 
+          />
+        </div>
+        <div className="text--center padding-horiz--md">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   )
@@ -58,6 +60,33 @@ export default function HomepageFeatures() {
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
+        </div>
+        <div className="row" style={{ marginTop: '3rem' }}>
+          <div className="col col--12">
+            <div className={styles.imageBlock}>
+              <div className="row">
+                <div className="col col--6" style={{ textAlign: 'center' }}>
+                  <img 
+                    src="https://monitor-center.com/wp-content/uploads/2025/12/MonitorCenter.png" 
+                    alt="Monitor Center Dashboard" 
+                    className={styles.fullWidthImage}
+                  />
+                </div>
+                <div className="col col--6" style={{ textAlign: 'center', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <div>
+                    <span className={styles.signupText}>Crea tu cuenta aquí ➡</span>
+                    <div style={{ marginTop: '1rem' }}>
+                      <span className={styles.signupButton}>
+                        <a href="https://cloud.monitor-center.com/app/signup" className={styles.signupLink}>
+                          https://cloud.monitor-center.com/app/signup
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

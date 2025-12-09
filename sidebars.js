@@ -17,14 +17,8 @@
 const sidebars = {
   tutorialSidebar: [
     'introduccion',
-    {
-      type: 'doc',
-      id: 'importancia-grabacion-nube-industrias',
-      label: 'La importancia de grabar en la nube en Industrias'
-    },
     'requerimientos-monitorcenter',
-    'guia-elegir-camara',
-    'instalacion-camaras-seguridad',
+    'conectar-camaras-dahua-monitorcenter',
     'agregar-monitorcenter-android',
     'agregar-monitorcenter-ios',
     {
