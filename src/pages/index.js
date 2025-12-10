@@ -17,7 +17,7 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle" style={{ color: '#2c5282' }}>{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <div className={styles.buttons} style={{ display: 'flex', gap: '1rem' }}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"
@@ -38,6 +38,29 @@ function HomepageHeader() {
                 verticalAlign: 'middle'
               }} 
             />
+          </Link>
+          <Link
+            className="button button--outline button--lg"
+            to="/blog"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '0.8rem 1.2rem',
+              border: '1px solid #1a3b5d',
+              color: '#1a3b5d',
+              transition: 'all 0.2s ease',
+              backgroundColor: '#d0e2ff'
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = '#b8d3ff';
+              e.currentTarget.style.color = '#1a3b5d';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = '#d0e2ff';
+              e.currentTarget.style.color = '#1a3b5d';
+            }}>
+            Blog 📚
           </Link>
         </div>
         <div style={{ 
