@@ -17,6 +17,46 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700; /* Bold */
 }
 
+/* Combined Partnership and Logo */
+.partnership-container {
+  display: flex;
+  align-items: center;
+  padding: 0 !important; /* Remove any default padding */
+  margin: 0 0.5rem;
+}
+
+.partnership-item {
+  display: flex !important;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  padding: 0 !important; /* Remove any default padding */
+}
+
+.partnership-item:hover {
+  text-decoration: none;
+}
+
+.navbar__dahua-logo {
+  height: 1.6rem; /* 80% of default navbar height */
+  width: auto;
+  margin-left: 0.2rem;
+  transition: opacity 0.2s ease;
+  vertical-align: middle;
+}
+
+.partnership-item:hover .navbar__dahua-logo {
+  opacity: 0.8;
+}
+
+/* Navbar title color */
+.navbar__title,
+.navbar__title.text--truncate {
+  color: #1a3b5d !important; /* Same as hero title color */
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+}
+
 /* Apply Work Sans to body text */
 body, 
 p, 

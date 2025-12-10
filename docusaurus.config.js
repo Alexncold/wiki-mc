@@ -92,6 +92,12 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            type: 'html',
+            position: 'left',
+            value: '<a href="/partnership" class="navbar__link partnership-item">Partnership <img src="https://monitor-center.com/wp-content/uploads/2025/12/Dahua_Technology_logo.svg_.png" alt="Dahua Technology" class="navbar__dahua-logo" /></a>',
+            className: 'partnership-container'
+          },
+          {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
