@@ -10,6 +10,24 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(to top, #e6f0fa 0%, #f5f9ff 100%);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 2rem;
+}
+
+.heroBanner .hero__title {
+  color: #1a3b5d; /* Elegant dark blue for title */
+  margin-bottom: 1rem;
+}
+
+.heroBanner .hero__subtitle {
+  color: #2c5282; /* Slightly lighter blue for subtitle */
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 996px) {
