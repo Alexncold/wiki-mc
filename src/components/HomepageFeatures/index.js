@@ -64,7 +64,7 @@ export default function HomepageFeatures() {
         <div className="row" style={{ marginTop: '3rem' }}>
           <div className="col col--12">
             <div className={styles.imageBlock}>
-              <div className="row" style={{ height: '100%', margin: 0 }}>
+              <div className={`row ${styles.featuresRowWithDivider}`} style={{ height: '100%', margin: 0 }}>
                 <div className="col col--6" style={{ textAlign: 'center', padding: 0, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img 
                     src="https://monitor-center.com/wp-content/uploads/2025/12/MonitorCenter.png" 
@@ -80,22 +80,16 @@ export default function HomepageFeatures() {
                   />
                 </div>
                 <div className="col col--6" style={{
-                  position: 'relative',
-                  minHeight: '300px',
                   backgroundColor: '#fff',
                   height: '100%',
                   display: 'flex',
                   alignItems: 'center',
-                  justifyContent: 'center'
+                  justifyContent: 'center',
+                  padding: '2rem'
                 }}>
                   <div style={{
-                    position: 'absolute',
-                    top: '50%',
-                    left: '50%',
-                    transform: 'translate(-50%, -50%)',
                     width: '100%',
                     maxWidth: '500px',
-                    padding: '0 2rem',
                     textAlign: 'center'
                   }}>
                     <h2 style={{
