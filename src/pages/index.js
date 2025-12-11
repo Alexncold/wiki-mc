@@ -13,7 +13,19 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <Heading as="h1" className="hero__title" style={{ color: '#1a3b5d' }}>
+        <Heading as="h1" className="hero__title" style={{ 
+          color: '#1a3b5d',
+          fontSize: '2rem',
+          whiteSpace: 'nowrap',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          width: '100%',
+          margin: '0 0 0.75rem 0',
+          padding: 0,
+          lineHeight: 1.1,
+          fontWeight: 700,
+          letterSpacing: '-0.5px'
+        }}>
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle" style={{ color: '#2c5282' }}>{siteConfig.tagline}</p>
@@ -63,15 +75,7 @@ function HomepageHeader() {
             Blog 📚
           </Link>
         </div>
-        <div style={{ 
-          marginTop: '2rem', 
-          textAlign: 'center', 
-          marginBottom: '0',
-          flex: '1',
-          display: 'flex',
-          alignItems: 'flex-end',
-          justifyContent: 'center'
-        }}>
+        <div className={styles.imageContainer}>
           <img 
             src="https://monitor-center.com/wp-content/uploads/2025/11/monitor-center-captura-multivista.png" 
             alt="Monitor Center Captura Multivista" 

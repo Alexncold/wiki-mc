@@ -33,9 +33,12 @@ const FeatureList = [
 ];
 
 function Feature({image, title, description}) {
+  // Create a slug from the title for the class name
+  const cardClass = title.toLowerCase().replace(/\s+/g, '-');
+  
   return (
     <div className={clsx('col col--4')}>
-      <div className={styles.featureCard}>
+      <div className={`${styles.featureCard} feature-card-${cardClass}`}>
         <div className="text--center">
           <img 
             src={image} 
@@ -52,20 +55,73 @@ function Feature({image, title, description}) {
   )
 }
 
+// Mobile signup component
+function MobileSignup() {
+  return (
+    <div className={styles.mobileSignup}>
+      <h2 style={{
+        fontSize: '1.8rem',
+        fontWeight: 600,
+        color: '#1a5f8e',
+        margin: '0 0 1.5rem 0',
+        lineHeight: '1.2',
+        textAlign: 'center'
+      }}>Crea tu cuenta aquí</h2>
+      <a 
+        href="https://cloud.monitor-center.com/app/signup" 
+        style={{
+          display: 'inline-block',
+          backgroundColor: '#e6f3ff',
+          padding: '0.6rem 1.2rem',
+          borderRadius: '50px',
+          color: '#1a5f8e',
+          textDecoration: 'none',
+          fontWeight: 500,
+          fontSize: '0.85rem',
+          whiteSpace: 'nowrap',
+          boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+          marginBottom: '2rem',
+          maxWidth: '100%',
+          overflow: 'hidden',
+          textOverflow: 'ellipsis',
+          boxSizing: 'border-box'
+        }}
+        onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#cce7ff'}
+        onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#e6f3ff'}
+      >
+        https://cloud.monitor-center.com/app/signup <kbd>➡</kbd>
+      </a>
+      <img 
+        src="https://monitor-center.com/wp-content/uploads/2025/12/MonitorCenter.png" 
+        alt="Monitor Center Dashboard" 
+        style={{
+          width: '80%',
+          maxWidth: '320px',
+          height: 'auto',
+          margin: '1.5rem auto',
+          display: 'block',
+          borderRadius: '8px'
+        }}
+      />
+    </div>
+  );
+}
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.featuresGrid}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
+        <MobileSignup />
         <div className="row" style={{ marginTop: '3rem' }}>
-          <div className="col col--12">
+          <div className={`col col--12 ${styles.desktopSignup}`}>
             <div className={styles.imageBlock}>
               <div className={`row ${styles.featuresRowWithDivider}`} style={{ height: '100%', margin: 0 }}>
-                <div className="col col--6" style={{ textAlign: 'center', padding: 0, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <div className={`col col--6 ${styles.desktopSignup}`} style={{ textAlign: 'center', padding: 0, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img 
                     src="https://monitor-center.com/wp-content/uploads/2025/12/MonitorCenter.png" 
                     alt="Monitor Center Dashboard" 
@@ -79,7 +135,7 @@ export default function HomepageFeatures() {
                     }}
                   />
                 </div>
-                <div className="col col--6" style={{
+                <div className={`col col--6 ${styles.desktopSignup}`} style={{
                   backgroundColor: '#fff',
                   height: '100%',
                   display: 'flex',

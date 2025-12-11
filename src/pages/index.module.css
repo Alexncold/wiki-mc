@@ -34,6 +34,43 @@
   .heroBanner {
     padding: 2rem;
   }
+  
+  .heroBanner .hero__title {
+    font-size: 8px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.5px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-weight: 600 !important;
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+  
+  .heroBanner .hero__subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+.imageContainer { 
+  margin-top: 2rem;
+  text-align: center;
+  margin-bottom: 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@media (max-width: 996px) {
+  .imageContainer {
+    display: none;
+  }
 }
 
 .buttons {

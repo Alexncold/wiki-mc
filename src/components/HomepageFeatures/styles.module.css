@@ -3,7 +3,66 @@
   align-items: stretch;
   padding: 2rem 0;
   width: 100%;
-  gap: 2rem;
+}
+
+/* Feature cards grid layout - Desktop */
+.featuresGrid {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping on desktop */
+  justify-content: space-between; /* Distribute space between cards */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Column layout for desktop */
+.featuresGrid .col {
+  flex: 1; /* Each column takes equal width */
+  min-width: 0; /* Allow columns to shrink below their content size */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  max-width: calc(33.333% - 1.34rem); /* Ensure max width with gap */
+}
+
+/* Mobile signup section */
+.mobileSignup {
+  display: none; /* Hidden by default */
+  text-align: center;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  background: transparent;
+}
+
+/* Hide desktop signup on mobile */
+.desktopSignup {
+  display: flex;
+}
+
+/* Mobile layout */
+@media (max-width: 996px) {
+  .mobileSignup {
+    display: block; /* Show on mobile */
+  }
+  
+  .desktopSignup {
+    display: none !important; /* Hide on mobile */
+  }
+  .featuresGrid {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+  
+  .featuresGrid .col {
+    flex: 0 0 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
+  
+  .featuresGrid .col:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .featureCard {
