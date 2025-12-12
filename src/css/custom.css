@@ -56,7 +56,35 @@ h1, h2, h3, h4, h5, h6,
   display: flex;
   align-items: center;
   padding: 0 !important; /* Remove any default padding */
-  margin: 0 0.5rem;
+  margin-left: 0 !important; /* Eliminar margen izquierdo */
+  margin-right: 0.5rem;
+}
+
+/* Asegurar que los elementos del navbar izquierdo estén alineados */
+.navbar__items--left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Espacio uniforme entre elementos */
+}
+
+/* Eliminar márgenes y paddings por defecto */
+.navbar__items--left > * {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Asegurar que los enlaces tengan el mismo espaciado */
+.navbar__items--left .navbar__item,
+.navbar__items--left .partnership-container {
+  padding: 0 0.5rem !important;
+}
+
+/* Asegurar que el logo de Dahua tenga el tamaño correcto */
+.navbar__dahua-logo {
+  height: 1.2rem;
+  width: auto;
+  margin-left: 0.3rem;
+  vertical-align: middle;
 }
 
 .partnership-item {
@@ -64,7 +92,7 @@ h1, h2, h3, h4, h5, h6,
   align-items: center;
   gap: 0.4rem;
   white-space: nowrap;
-  padding: 0 !important; /* Remove any default padding */
+  padding: 0 12px !important; /* 12px de padding lateral */
 }
 
 .partnership-item:hover {
