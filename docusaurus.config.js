@@ -93,9 +93,16 @@ const config = {
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             type: 'html',
-            position: 'left',
+            position: 'right',
             value: '<a href="/partnership" class="navbar__link partnership-item">Partnership <img src="https://monitor-center.com/wp-content/uploads/2025/12/Dahua_Technology_logo.svg_.png" alt="Dahua Technology" class="navbar__dahua-logo" /></a>',
-            className: 'partnership-container'
+            className: 'partnership-container desktop-only'
+          },
+          // Versión móvil del enlace de partnership
+          {
+            type: 'html',
+            position: 'right',
+            value: '<a href="/partnership" class="navbar__link mobile-partnership">Partnership <img src="https://monitor-center.com/wp-content/uploads/2025/12/Dahua_Technology_logo.svg_.png" alt="Dahua Technology" class="mobile-dahua-logo" /></a>',
+            className: 'mobile-only',
           },
           {
             href: 'https://github.com/facebook/docusaurus',

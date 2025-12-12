@@ -30,9 +30,53 @@
   line-height: 1.5;
 }
 
+/* Estilos para imágenes */
+.mobileOnly {
+  display: none; /* Ocultar por defecto */
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.mobileImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 3px solid rgba(26, 59, 93, 0.2); /* Borde azul un poco más grueso con transparencia */
+  transition: border-color 0.3s ease; /* Transición suave al hacer hover */
+}
+
+.mobileImage:hover {
+  border-color: rgba(26, 59, 93, 0.4); /* Borde ligeramente más visible al hacer hover */
+}
+
+/* Estilos para escritorio */
+.desktopOnly {
+  display: block; /* Mostrar por defecto */
+  margin: 2rem 0 0 0; /* Eliminamos el margen inferior */
+  text-align: center;
+  line-height: 0; /* Elimina el espacio extra que puede aparecer debajo de la imagen */
+}
+
+.desktopImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0; /* Eliminamos el redondeo de esquinas */
+  border-bottom-left-radius: 0; /* Aseguramos que no haya redondeo en esquinas inferiores */
+  border-bottom-right-radius: 0; /* Aseguramos que no haya redondeo en esquinas inferiores */
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .mobileOnly {
+    display: block; /* Mostrar solo en móviles */
+  }
+  
+  .desktopOnly {
+    display: none; /* Ocultar en móviles */
   }
   
   .heroBanner .hero__title {

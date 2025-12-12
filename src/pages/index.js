@@ -75,17 +75,21 @@ function HomepageHeader() {
             Blog 📚
           </Link>
         </div>
-        <div className={styles.imageContainer}>
+        {/* Imagen solo para móviles - Debajo de los botones */}
+        <div className={styles.mobileOnly}>
+          <img 
+            src="https://i.ibb.co/0j7Xpf0X/Macbook-Air-demo-monitor-center-com.png" 
+            alt="Vista previa de Monitor Center" 
+            className={styles.mobileImage}
+          />
+        </div>
+        
+        {/* Imagen para escritorio */}
+        <div className={styles.desktopOnly}>
           <img 
             src="https://monitor-center.com/wp-content/uploads/2025/11/monitor-center-captura-multivista.png" 
             alt="Monitor Center Captura Multivista" 
-            style={{ 
-              maxWidth: '100%', 
-              height: 'auto',
-              borderRadius: '0',
-              marginBottom: '0',
-              display: 'block'
-            }} 
+            className={styles.desktopImage}
           />
         </div>
       </div>

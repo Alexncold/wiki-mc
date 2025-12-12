@@ -17,6 +17,40 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700; /* Bold */
 }
 
+/* Mostrar/ocultar elementos según el dispositivo */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  .desktop-only {
+    display: none !important;
+  }
+  
+  .mobile-only {
+    display: block !important;
+  }
+  
+  /* Ocultar todos los elementos del navbar excepto el logo y el botón del menú */
+  .navbar__items--right:not(.navbar__search),
+  .navbar__items--left > :not(.navbar__brand) {
+    display: none !important;
+  }
+  
+  /* Asegurar que el logo y el botón del menú se vean correctamente */
+  .navbar__brand {
+    flex: 1;
+  }
+  
+  .navbar__toggle {
+    display: block !important;
+  }
+}
+
 /* Combined Partnership and Logo */
 .partnership-container {
   display: flex;
@@ -47,6 +81,34 @@ h1, h2, h3, h4, h5, h6,
 
 .partnership-item:hover .navbar__dahua-logo {
   opacity: 0.8;
+}
+
+/* Estilos para el menú móvil */
+.mobile-dahua-logo {
+  height: 1.2rem; /* Tamaño ligeramente más pequeño para móvil */
+  width: auto;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  opacity: 0.9;
+}
+
+/* Asegurar que el enlace de partnership en móvil se vea bien */
+.mobile-partnership {
+  display: flex !important;
+  align-items: center;
+  padding: 0.5rem 0.8rem !important;
+}
+
+/* Asegurar que el menú desplegable muestre correctamente el logo */
+.navbar-sidebar .mobile-dahua-logo {
+  margin-left: 8px;
+  height: 1rem;
+}
+
+/* Asegurar que el texto y el logo estén alineados */
+.navbar-sidebar .mobile-partnership {
+  display: inline-flex !important;
+  align-items: center;
 }
 
 /* Navbar title color */
