@@ -3,6 +3,10 @@ title: Capacitación a Vendedores
 sidebar_label: Capacitación a Vendedores
 ---
 
+import PasswordProtected from '@site/src/components/PasswordProtected';
+
+<PasswordProtected>
+
 # Capacitación a Vendedores
 
 ## Introducción
@@ -232,6 +236,4 @@ Para poder probar el servicio, el Integrador deberá detallar la siguiente infor
 - Esa cuenta es la que se utilizará para visualizar las cámaras en el sistema, por lo que es necesario tener precaución con el correo electrónico a utilizar.
 - Con equipos de marca Dahua, es posible realizar esta prueba a través del servicio de P2P de la marca, para facilidad y rapidez. Con clientes de pago, se debería proceder con la apertura de puertos y utilizar IP fija o DNS.
 
-
-
-
+</PasswordProtected>
