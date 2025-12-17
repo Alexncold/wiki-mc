@@ -32,7 +32,7 @@ function HomepageHeader() {
         <div className={styles.buttons} style={{ display: 'flex', gap: '1rem' }}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/docs/introduccion"
             style={{
               display: 'flex',
               alignItems: 'center',
