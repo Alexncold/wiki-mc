@@ -23,7 +23,7 @@ const sidebars = {
     'agregar-monitorcenter-ios',
     {
       type: 'category',
-      label: 'Capacitación a Vendedores',
+      label: 'Capacitación a Vendedores 🔒',
       link: {
         type: 'doc',
         id: 'capacitacion-vendedores',
