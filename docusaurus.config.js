@@ -119,7 +119,7 @@ const config = {
             items: [
               {
                 label: 'Inicio',
-                to: '/docs/intro',
+                to: '/docs/introduccion',
               },
             ],
           },
@@ -129,6 +129,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: 'Demo',
+                to: '/docs/demo',
               },
             ],
           },
