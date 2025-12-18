@@ -1,10 +1,9 @@
 ---
 title: 'Grabaciones en la Nube para tus cámaras DAHUA'
 date: 2025-12-05
-author: MonitorCenter Team
 tags: [Dahua, nube, grabaciones, cámaras de seguridad, almacenamiento, monitorcenter]
+authors: monitor_team
 ---
-
 # Grabaciones en la Nube para tus cámaras DAHUA
 
 Grabaciones y más control en la Nube para tus cámaras de seguridad Dahua.

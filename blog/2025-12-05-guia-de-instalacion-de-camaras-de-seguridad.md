@@ -1,10 +1,9 @@
 ---
 title: 'Guía de instalación de cámaras de seguridad'
 date: 2025-12-05
-author: MonitorCenter Team
 tags: [instalación, cámaras de seguridad, guía, videovigilancia, wifi, cámaras IP, cámaras analógicas]
+authors: monitor_team
 ---
-
 # Guía de instalación de cámaras de seguridad
 
 La guía que necesitas para una correcta instalación de videovigilancia.

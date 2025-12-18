@@ -1,10 +1,9 @@
 ---
 title: 'La importancia de grabar en la nube en Industrias'
 date: 2025-12-05
-author: MonitorCenter Team
 tags: [seguridad, nube, industrias, videovigilancia]
+authors: monitor_team
 ---
-
 # La tendencia en industrias del siglo XXI: grabar en la nube tus cámaras de seguridad o DVR
 
 Proteger y asegurar un negocio con cámaras de seguridad es algo estándar. Pero, ¿sabías que una cámara puede tener muchas más funcionalidades además de grabar? Las empresas e industrias en la actualidad deben tener protocolos seguros, avalados por normas y leyes para poder funcionar correctamente, y entre esas normas se puede encontrar la necesidad de un almacenamiento extenso y seguro de videos. Fábricas, oficinas, talleres y cualquier empresa de manufactura o planta de producción debe poder ser capaz de contar con un sistema confiable y seguro para sus registros de videovigilancia.

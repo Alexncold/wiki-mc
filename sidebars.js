@@ -21,6 +21,7 @@ const sidebars = {
     'conectar-camaras-dahua-monitorcenter',
     'agregar-monitorcenter-android',
     'agregar-monitorcenter-ios',
+    'demo',
     {
       type: 'category',
       label: 'Capacitación a Vendedores 🔒',
@@ -145,20 +146,7 @@ const sidebars = {
         },
       ]
     }
-  ],
-
-  // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-   */
+  ]
 };
 
 export default sidebars;

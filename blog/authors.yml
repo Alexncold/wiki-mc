@@ -1,3 +1,10 @@
+monitor_team:
+  name: MonitorCenter Team
+  title: Expertos en Videovigilancia Cloud
+  url: https://monitor-center.com
+  image_url: https://i.ibb.co/PZzhgth8/Monitor-Center-LOGO-1.png
+  page: true
+
 yangshun:
   name: Yangshun Tay
   title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd

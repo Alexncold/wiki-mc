@@ -1,10 +1,9 @@
 ---
 title: 'Errores comunes al instalar cámaras de seguridad y cómo evitarlos'
 date: 2025-12-05
-author: MonitorCenter Team
 tags: [cámaras de seguridad, instalación, errores comunes, consejos, monitorcenter]
+authors: monitor_team
 ---
-
 # Errores comunes al instalar cámaras de seguridad y cómo evitarlos
 
 Instalar un sistema de cámaras de seguridad puede parecer sencillo, pero hay ciertos errores que afectan la calidad de las grabaciones y la efectividad del monitoreo. En este artículo de MonitorCenter te mostramos los errores más comunes al instalar cámaras de seguridad y cómo evitarlos para garantizar que tu sistema funcione de manera óptima.

@@ -1,10 +1,9 @@
 ---
 title: 'Guía para elegir una cámara de seguridad'
 date: 2025-12-05
-author: MonitorCenter Team
 tags: [cámaras de seguridad, guía de compra, hogar, vigilancia]
+authors: monitor_team
 ---
-
 # Guía para elegir una cámara de seguridad
 
 ¿Estás necesitando un sistema de vigilancia para tu casa, pero hay demasiadas opciones para elegir? ¿Debes llamar a un técnico instalador o la podrías configurar tú mismo en tu hogar? Y lo más importante, ¡el precio! ¿Cuánto voy a gastar en comprar un equipo completo? Para hallar respuesta a todas esas preguntas, mira nuestra guía a continuación sobre la mejor opción en cámaras de seguridad para casa.
