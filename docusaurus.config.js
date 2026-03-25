@@ -75,13 +75,17 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'dark',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'MonitorCenter Wiki',
+        title: '',
         logo: {
-          alt: 'Monitor Center Logo',
-          src: 'https://i.ibb.co/PZzhgth8/Monitor-Center-LOGO-1.png',
+          alt: 'MonitorCenter',
+          src: 'img/mc-logo.png',
+          srcDark: 'img/mc-logo-dark.png',
+          height: 28,
         },
         items: [
           {
@@ -102,6 +106,11 @@ const config = {
             value: '<a href="/partnership" class="navbar__link partnership-item">Partnership <img src="https://monitor-center.com/wp-content/uploads/2025/12/Dahua_Technology_logo.svg_.png" alt="Dahua Technology" class="navbar__dahua-logo" /></a>',
             className: 'partnership-container desktop-only'
           },
+          {
+            to: '/presentacion',
+            label: 'Presentación',
+            position: 'left',
+          },
           // Versión móvil del enlace de partnership
           {
             type: 'html',
@@ -112,7 +121,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'light',
+        style: 'dark',
         links: [
           {
             title: 'Docs',

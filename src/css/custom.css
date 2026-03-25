@@ -1,90 +1,318 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* ── MC Design System — Docusaurus Theme ── */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Work+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Apply Roboto Bold to all headings */
+/* ── Radix Slate Dark tokens ── */
+:root {
+  --s1:  #0d0f11;
+  --s2:  #111416;
+  --s3:  #181c20;
+  --s4:  #1e2329;
+  --s5:  #232a32;
+  --s6:  #2d3740;
+  --s7:  #38434e;
+  --s9:  #556170;
+  --s11: #97a3ae;
+  --s12: #eceef0;
+  --mc-blue:   #5685cb;
+  --mc-green:  #79b75f;
+  --mc-red:    #e5484d;
+  --mc-orange: #f97316;
+
+  /* Infima overrides */
+  --ifm-color-primary:         #5685cb;
+  --ifm-color-primary-dark:    #4074be;
+  --ifm-color-primary-darker:  #3b6db5;
+  --ifm-color-primary-darkest: #305a96;
+  --ifm-color-primary-light:   #6c96d2;
+  --ifm-color-primary-lighter: #749dd5;
+  --ifm-color-primary-lightest:#90b1de;
+
+  --ifm-background-color:            #0d0f11;
+  --ifm-background-surface-color:    #111416;
+  --ifm-navbar-background-color:     #111416;
+  --ifm-navbar-shadow:               0 1px 0 0 #2d3740;
+  --ifm-footer-background-color:     #111416;
+  --ifm-toc-border-color:            #2d3740;
+  --ifm-hr-border-color:             #2d3740;
+  --ifm-color-emphasis-200:          #2d3740;
+  --ifm-color-emphasis-300:          #38434e;
+  --ifm-color-emphasis-600:          #97a3ae;
+  --ifm-color-emphasis-700:          #eceef0;
+  --ifm-color-content:               #eceef0;
+  --ifm-color-content-secondary:     #97a3ae;
+  --ifm-menu-color:                  #97a3ae;
+  --ifm-menu-color-active:           #5685cb;
+  --ifm-menu-color-background-active:rgba(86,133,203,0.12);
+  --ifm-menu-color-background-hover: rgba(86,133,203,0.08);
+  --ifm-link-color:                  #5685cb;
+  --ifm-link-hover-color:            #7ba8de;
+  --ifm-code-background:             #181c20;
+  --ifm-code-font-size:              93%;
+  --ifm-font-size-base:              16px;
+  --ifm-line-height-base:            1.65;
+  --ifm-global-radius:               8px;
+  --ifm-card-background-color:       #111416;
+  --ifm-table-stripe-background:     rgba(255,255,255,0.02);
+  --ifm-table-border-color:          #2d3740;
+  --docusaurus-highlighted-code-line-bg: rgba(86,133,203,0.12);
+
+  /* Sidebar */
+  --ifm-sidebar-width:               280px;
+}
+
+/* Dark mode inherits root (site is dark by default) */
+[data-theme='dark'] {
+  --ifm-color-primary:         #5685cb;
+  --ifm-color-primary-dark:    #4074be;
+  --ifm-color-primary-darker:  #3b6db5;
+  --ifm-color-primary-darkest: #305a96;
+  --ifm-color-primary-light:   #6c96d2;
+  --ifm-color-primary-lighter: #749dd5;
+  --ifm-color-primary-lightest:#90b1de;
+  --ifm-background-color:            #0d0f11;
+  --ifm-background-surface-color:    #111416;
+  --docusaurus-highlighted-code-line-bg: rgba(86,133,203,0.12);
+}
+
+[data-theme='light'] {
+  --ifm-color-primary:         #3f6ab8;
+  --ifm-background-color:            #f8fafc;
+  --ifm-background-surface-color:    #ffffff;
+  --ifm-navbar-background-color:     #ffffff;
+  --ifm-footer-background-color:     #0d0f11;
+  --ifm-color-content:               #0f172a;
+  --ifm-color-content-secondary:     #475569;
+  --ifm-menu-color:                  #475569;
+  --ifm-toc-border-color:            #e2e8f0;
+  --ifm-hr-border-color:             #e2e8f0;
+  --ifm-color-emphasis-200:          #e2e8f0;
+  --ifm-color-emphasis-300:          #cbd5e1;
+  --ifm-code-background:             #f1f5f9;
+  --ifm-table-border-color:          #e2e8f0;
+}
+
+/* ── Typography ── */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
 .hero__title,
-.markdown h1, .markdown h2, .markdown h3, 
+.navbar__title,
+.markdown h1, .markdown h2, .markdown h3,
 .markdown h4, .markdown h5, .markdown h6 {
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700; /* Bold */
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
-/* Mostrar/ocultar elementos según el dispositivo */
-.desktop-only {
-  display: block;
+body, p, span, a, li, td, th, label,
+input, button, select, textarea,
+.hero__subtitle, .menu__link,
+.navbar__item, .footer__link-item,
+.markdown p, .markdown ul, .markdown ol,
+.markdown li, .markdown table {
+  font-family: 'Inter', sans-serif;
 }
 
-.mobile-only {
-  display: none;
+/* ── Navbar ── */
+.navbar {
+  border-bottom: 1px solid var(--s6);
+  height: 60px;
+}
+
+.navbar__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 1.25rem !important;
+  letter-spacing: -0.01em;
+  color: var(--s12) !important;
+}
+
+.navbar__logo {
+  height: 28px;
+  width: auto;
+}
+
+.navbar__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--s11) !important;
+  transition: color 150ms;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--mc-blue) !important;
+}
+
+/* ── Sidebar ── */
+.menu__link {
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 150ms, color 150ms;
+}
+
+.menu__link--active {
+  font-weight: 600;
+  background: var(--ifm-menu-color-background-active) !important;
+  border-left: 2px solid var(--mc-blue);
+  padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 2px);
+}
+
+.menu__link[href*="demo"] {
+  color: var(--mc-blue) !important;
+  background: rgba(86,133,203,0.10);
+  border: 1px solid rgba(86,133,203,0.20);
+  border-radius: 6px;
+}
+
+.menu__list-item-collapsible--active .menu__link {
+  color: var(--mc-blue) !important;
+}
+
+/* ── Table of contents ── */
+.table-of-contents__link {
+  font-size: 12px;
+  color: var(--s9) !important;
+  transition: color 150ms;
+}
+
+.table-of-contents__link--active,
+.table-of-contents__link:hover {
+  color: var(--mc-blue) !important;
+}
+
+/* ── Markdown content ── */
+.markdown h1 { font-size: 2.5rem; line-height: 0.90; margin-bottom: 1.25rem; }
+.markdown h2 { font-size: 1.9rem; line-height: 0.92; margin-top: 2rem; border-bottom: 1px solid var(--s6); padding-bottom: 0.5rem; }
+.markdown h3 { font-size: 1.5rem; }
+.markdown h4 { font-size: 1.2rem; }
+
+.markdown a {
+  color: var(--mc-blue);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(86,133,203,0.30);
+  transition: border-color 150ms;
+}
+
+.markdown a:hover {
+  border-bottom-color: var(--mc-blue);
+}
+
+.markdown code {
+  background: var(--ifm-code-background);
+  border: 1px solid var(--s6);
+  border-radius: 4px;
+  font-size: 13px;
+  padding: 1px 6px;
+}
+
+.markdown blockquote {
+  border-left: 3px solid var(--mc-blue);
+  background: rgba(86,133,203,0.06);
+  border-radius: 0 6px 6px 0;
+  color: var(--s11);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+}
+
+.markdown table {
+  font-size: 14px;
+}
+
+.markdown table th {
+  background: var(--s3);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--s9);
+}
+
+/* ── Admonitions ── */
+.alert {
+  border-radius: 8px;
+  border-left-width: 3px;
+}
+
+.alert--info    { border-left-color: var(--mc-blue); background: rgba(86,133,203,0.07); }
+.alert--success { border-left-color: var(--mc-green); background: rgba(121,183,95,0.07); }
+.alert--warning { border-left-color: var(--mc-orange); background: rgba(249,115,22,0.07); }
+.alert--danger  { border-left-color: var(--mc-red); background: rgba(229,72,77,0.07); }
+
+/* ── Code blocks ── */
+.prism-code {
+  border: 1px solid var(--s6) !important;
+  border-radius: 8px !important;
+}
+
+/* ── Pagination ── */
+.pagination-nav__link {
+  border: 1px solid var(--s6) !important;
+  border-radius: 8px !important;
+  background: var(--s2) !important;
+  transition: border-color 150ms !important;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--mc-blue) !important;
+}
+
+/* ── Footer ── */
+.footer {
+  background: var(--s2) !important;
+  border-top: 1px solid var(--s6);
+  padding-bottom: 3rem !important;
+}
+
+.footer__title {
+  font-family: 'Barlow Condensed', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: var(--s11) !important;
+}
+
+.footer__link-item {
+  font-size: 13px !important;
+  color: var(--s9) !important;
+  transition: color 150ms !important;
+}
+
+.footer__link-item:hover {
+  color: var(--mc-blue) !important;
+}
+
+.footer__copyright {
+  font-size: 11px;
+  color: var(--s9);
+  border-top: 1px solid var(--s6);
+  padding-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 @media (max-width: 996px) {
-  .desktop-only {
-    display: none !important;
+  .footer__links {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 2rem;
   }
-  
-  .mobile-only {
-    display: block !important;
-  }
-  
-  /* Ocultar todos los elementos del navbar excepto el logo y el botón del menú */
-  .navbar__items--right:not(.navbar__search),
-  .navbar__items--left > :not(.navbar__brand) {
-    display: none !important;
-  }
-  
-  /* Asegurar que el logo y el botón del menú se vean correctamente */
-  .navbar__brand {
+  .footer__col {
     flex: 1;
-  }
-  
-  .navbar__toggle {
-    display: block !important;
+    min-width: 120px;
   }
 }
 
-/* Combined Partnership and Logo */
-.partnership-container {
-  display: flex;
-  align-items: center;
-  padding: 0 !important; /* Remove any default padding */
-  margin-left: 0 !important; /* Eliminar margen izquierdo */
-  margin-right: 0.5rem;
-}
-
-/* Asegurar que los elementos del navbar izquierdo estén alineados */
-.navbar__items--left {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem; /* Espacio uniforme entre elementos */
-}
-
-/* Eliminar márgenes y paddings por defecto */
-.navbar__items--left > * {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Asegurar que los enlaces tengan el mismo espaciado */
-.navbar__items--left .navbar__item,
-.navbar__items--left .partnership-container {
-  padding: 0 0.5rem !important;
-}
-
-/* Asegurar que el logo de Dahua tenga el tamaño correcto */
+/* ── Partnership / Dahua navbar ── */
 .navbar__dahua-logo {
-  height: 1.2rem;
+  height: 1.4rem;
   width: auto;
   margin-left: 0.3rem;
   vertical-align: middle;
+  opacity: 0.75;
+  transition: opacity 200ms;
 }
 
 .partnership-item {
@@ -92,136 +320,58 @@ h1, h2, h3, h4, h5, h6,
   align-items: center;
   gap: 0.4rem;
   white-space: nowrap;
-  padding: 0 12px !important; /* 12px de padding lateral */
-}
-
-.partnership-item:hover {
-  text-decoration: none;
-}
-
-.navbar__dahua-logo {
-  height: 1.6rem; /* 80% of default navbar height */
-  width: auto;
-  margin-left: 0.2rem;
-  transition: opacity 0.2s ease;
-  vertical-align: middle;
+  padding: 0 12px !important;
 }
 
 .partnership-item:hover .navbar__dahua-logo {
-  opacity: 0.8;
+  opacity: 1;
 }
 
-/* Estilos para el menú móvil */
+.partnership-container {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.navbar__items--left {
+  gap: 0.25rem;
+}
+
+/* ── Responsive ── */
+.desktop-only { display: block; }
+.mobile-only  { display: none; }
+
+@media (max-width: 996px) {
+  .desktop-only { display: none !important; }
+  .mobile-only  { display: block !important; }
+
+  .navbar__items--left > :not(.navbar__brand) { display: none !important; }
+  .navbar__brand { flex: 1; }
+  .navbar__toggle { display: block !important; }
+}
+
+/* ── Mobile dahua ── */
 .mobile-dahua-logo {
-  height: 1.2rem; /* Tamaño ligeramente más pequeño para móvil */
+  height: 1.1rem;
   width: auto;
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
   vertical-align: middle;
-  opacity: 0.9;
+  opacity: 0.80;
 }
 
-/* Asegurar que el enlace de partnership en móvil se vea bien */
 .mobile-partnership {
   display: flex !important;
   align-items: center;
   padding: 0.5rem 0.8rem !important;
 }
 
-/* Asegurar que el menú desplegable muestre correctamente el logo */
 .navbar-sidebar .mobile-dahua-logo {
   margin-left: 8px;
   height: 1rem;
 }
 
-/* Asegurar que el texto y el logo estén alineados */
-.navbar-sidebar .mobile-partnership {
-  display: inline-flex !important;
-  align-items: center;
-}
-
-/* Navbar title color */
-.navbar__title,
-.navbar__title.text--truncate {
-  color: #1a3b5d !important; /* Same as hero title color */
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 700;
-}
-
-/* Apply Work Sans to body text */
-body, 
-p, 
-span, 
-a, 
-li, 
-td, 
-th, 
-label, 
-input, 
-button, 
-select, 
-textarea,
-.hero__subtitle,
-.markdown p,
-.markdown ul,
-.markdown ol,
-.markdown li,
-.markdown table,
-.markdown blockquote,
-.markdown code:not([class*="codeBlock"]) {
-  font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 400; /* Regular weight */
-}
-
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #1a5f8e;
-  --ifm-color-primary-dark: #175680;
-  --ifm-color-primary-darker: #165179;
-  --ifm-color-primary-darkest: #124364;
-  --ifm-color-primary-light: #1d6a9c;
-  --ifm-color-primary-lighter: #1e6fa3;
-  --ifm-color-primary-lightest: #227cba;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #1a8bc2;
-  --ifm-color-primary-dark: #177daf;
-  --ifm-color-primary-darker: #1676a5;
-  --ifm-color-primary-darkest: #126188;
-  --ifm-color-primary-light: #1f99d5;
-  --ifm-color-primary-lighter: #26a0d8;
-  --ifm-color-primary-lightest: #3faddd;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos personalizados para el footer */
-.footer {
-  background-color: #f5f5f5 !important;
-  position: relative;
-  margin-top: 5px;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: #e0e0e0; /* Gris aún más claro */
-}
-
-.footer__link-item {
-  color: #333 !important;
-}
-
-.footer__link-item:hover {
-  color: #1a5f8e !important;
-}
-
-.footer__title {
-  color: #333 !important;
-}
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--s1); }
+::-webkit-scrollbar-thumb { background: var(--s6); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--s7); }

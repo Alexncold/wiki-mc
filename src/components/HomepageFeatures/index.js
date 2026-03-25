@@ -1,185 +1,120 @@
 import React from 'react';
-import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
 const FeatureList = [
   {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="16" y1="13" x2="8" y2="13"/>
+        <line x1="16" y1="17" x2="8" y2="17"/>
+        <polyline points="10 9 9 9 8 9"/>
+      </svg>
+    ),
     title: 'Información',
-    image: require('@site/static/img/information.png').default,
-    description: (
-      <>
-        Encuentra toda la información relevante sobre nuestra plataforma en la nube
-      </>
-    ),
+    description: 'Encontrá toda la información relevante sobre nuestra plataforma en la nube: planes, funcionalidades y casos de uso.',
+    link: '/docs/introduccion',
+    linkLabel: 'Ver introducción',
   },
   {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+    ),
     title: 'Documentación Técnica',
-    image: require('@site/static/img/toolbox.png').default,
-    description: (
-      <>
-        Aprende cómo funciona MonitorCenter de manera técnica y detallada
-      </>
-    ),
+    description: 'Guías de instalación, configuración de cámaras, integración con DVR/NVR y compatibilidad de dispositivos.',
+    link: '/docs/requerimientos-monitorcenter',
+    linkLabel: 'Ver requerimientos',
   },
   {
-    title: 'Desarrollo Comercial',
-    image: require('@site/static/img/profit.png').default,
-    description: (
-      <>
-        Sé parte de una alianza estratégica para crecer en conjunto
-      </>
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
     ),
+    title: 'Desarrollo Comercial',
+    description: 'Sé parte de una alianza estratégica. Recursos para revendedores, integradores y socios tecnológicos.',
+    link: '/partnership',
+    linkLabel: 'Ver partnership',
   },
 ];
 
-function Feature({image, title, description}) {
-  // Create a slug from the title for the class name
-  const cardClass = title.toLowerCase().replace(/\s+/g, '-');
-  
+function FeatureCard({ icon, title, description, link, linkLabel }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className={`${styles.featureCard} feature-card-${cardClass}`}>
-        <div className="text--center">
-          <img 
-            src={image} 
-            className={styles.featureImage} 
-            alt={title} 
-          />
-        </div>
-        <div className="text--center padding-horiz--md">
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
+    <div className={styles.card}>
+      <div className={styles.cardHeader}>
+        <div className={styles.cardIcon}>{icon}</div>
+        <h3 className={styles.cardTitle}>{title}</h3>
       </div>
+      <p className={styles.cardDesc}>{description}</p>
+      <Link className={styles.cardLink} to={link}>
+        {linkLabel}
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </Link>
     </div>
-  )
+  );
 }
 
-// Mobile signup component
-function MobileSignup() {
+function CTABanner() {
   return (
-    <div className={styles.mobileSignup}>
-      <h2 style={{
-        fontSize: '1.8rem',
-        fontWeight: 600,
-        color: '#1a5f8e',
-        margin: '0 0 1.5rem 0',
-        lineHeight: '1.2',
-        textAlign: 'center'
-      }}>Crea tu cuenta aquí</h2>
-      <a 
-        href="https://cloud.monitor-center.com/app/signup" 
-        style={{
-          display: 'inline-block',
-          backgroundColor: '#e6f3ff',
-          padding: '0.6rem 1.2rem',
-          borderRadius: '50px',
-          color: '#1a5f8e',
-          textDecoration: 'none',
-          fontWeight: 500,
-          fontSize: '0.85rem',
-          whiteSpace: 'nowrap',
-          boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
-          marginBottom: '2rem',
-          maxWidth: '100%',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
-          boxSizing: 'border-box'
-        }}
-        onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#cce7ff'}
-        onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#e6f3ff'}
-      >
-        https://cloud.monitor-center.com/app/signup <kbd>➡</kbd>
-      </a>
-      <img 
-        src="https://monitor-center.com/wp-content/uploads/2025/12/MonitorCenter.png" 
-        alt="Monitor Center Dashboard" 
-        style={{
-          width: '80%',
-          maxWidth: '320px',
-          height: 'auto',
-          margin: '1.5rem auto',
-          display: 'block',
-          borderRadius: '8px'
-        }}
-      />
+    <div className={styles.cta}>
+      <div className={styles.ctaGlow} />
+      <div className={styles.ctaContent}>
+        <div className={styles.ctaLeft}>
+          <span className={styles.ctaEyebrow}>Plataforma lista</span>
+          <h2 className={styles.ctaTitle}>Nada queda sin verse.</h2>
+          <p className={styles.ctaDesc}>
+            Accedé a tu cuenta desde cualquier dispositivo, sin instalar nada.
+          </p>
+        </div>
+        <div className={styles.ctaActions}>
+          <a
+            href="https://cloud.monitor-center.com/app/signup"
+            className={styles.ctaBtnPrimary}
+          >
+            Crear cuenta gratis
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <Link to="/docs/demo" className={styles.ctaBtnOutline}>
+            Ver demo
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={styles.section}>
       <div className="container">
-        <div className={styles.featuresGrid}>
+        <div className={styles.sectionHead}>
+          <span className={styles.sectionEyebrow}>¿Por dónde empezar?</span>
+          <h2 className={styles.sectionTitle}>Todo en un solo lugar</h2>
+          <p className={styles.sectionSub}>
+            Desde la configuración inicial hasta recursos avanzados para socios comerciales.
+          </p>
+        </div>
+        <div className={styles.grid}>
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <FeatureCard key={idx} {...props} />
           ))}
         </div>
-        <MobileSignup />
-        <div className="row" style={{ marginTop: '3rem' }}>
-          <div className={`col col--12 ${styles.desktopSignup}`}>
-            <div className={styles.imageBlock}>
-              <div className={`row ${styles.featuresRowWithDivider}`} style={{ height: '100%', margin: 0 }}>
-                <div className={`col col--6 ${styles.desktopSignup}`} style={{ textAlign: 'center', padding: 0, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <img 
-                    src="https://monitor-center.com/wp-content/uploads/2025/12/MonitorCenter.png" 
-                    alt="Monitor Center Dashboard" 
-                    className={styles.fullWidthImage}
-                    style={{
-                      maxWidth: '60%',
-                      height: 'auto',
-                      marginTop: '0',
-                      alignSelf: 'flex-start',
-                      paddingTop: '0'
-                    }}
-                  />
-                </div>
-                <div className={`col col--6 ${styles.desktopSignup}`} style={{
-                  backgroundColor: '#fff',
-                  height: '100%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  padding: '2rem'
-                }}>
-                  <div style={{
-                    width: '100%',
-                    maxWidth: '500px',
-                    textAlign: 'center'
-                  }}>
-                    <h2 style={{
-                      fontSize: '2.2rem',
-                      fontWeight: 600,
-                      color: '#1a5f8e',
-                      margin: '0 0 1.5rem 0',
-                      lineHeight: '1.2'
-                    }}>Crea tu cuenta aquí</h2>
-                    <a 
-                      href="https://cloud.monitor-center.com/app/signup" 
-                      style={{
-                        display: 'inline-block',
-                        backgroundColor: '#e6f3ff',
-                        padding: '0.8rem 2rem',
-                        borderRadius: '50px',
-                        color: '#1a5f8e',
-                        textDecoration: 'none',
-                        fontWeight: 500,
-                        fontSize: '1.1rem',
-                        whiteSpace: 'nowrap',
-                        boxShadow: '0 2px 5px rgba(0,0,0,0.1)'
-                      }}
-                      onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#cce7ff'}
-                      onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#e6f3ff'}
-                    >
-                      https://cloud.monitor-center.com/app/signup <kbd>➡</kbd>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CTABanner />
       </div>
     </section>
   );
