@@ -1858,13 +1858,6 @@ window.addEventListener('scroll', function() {
   lastScrollY = currentScrollY;
 }, { passive: true });
 
-// ── Hide navbar when embedded in iframe ───────────────────────────────────
-if (window.self !== window.top) {
-  var navEl = document.querySelector('nav');
-  if (navEl) navEl.style.display = 'none';
-  document.body.style.paddingTop = '0';
-}
-
 // ── Active nav link on scroll ─────────────────────────────────────────────
 var sections = document.querySelectorAll('section[id]');
 var navLinks = document.querySelectorAll('.nav-links a');
