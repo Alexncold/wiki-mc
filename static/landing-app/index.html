@@ -1435,7 +1435,7 @@ footer {
         <div class="browser-url">https://monitor-center.com/app</div>
       </div>
       <div id="mockup-wrap">
-        <iframe id="mockup-frame" src="mockup-app-v1.html" title="MonitorCenter App"></iframe>
+        <iframe id="mockup-frame" src="/mockup-dark/" title="MonitorCenter App"></iframe>
       </div>
     </div>
     <div class="plat-stats fade-in">
@@ -1806,7 +1806,7 @@ function toggleTheme() {
   document.getElementById('icon-moon').style.display = isDark ? 'none' : '';
   document.getElementById('icon-sun').style.display = isDark ? '' : 'none';
   var frame = document.getElementById('mockup-frame');
-  if (frame) frame.src = isDark ? 'mockup-app-v1-light.html' : 'mockup-app-v1.html';
+  if (frame) frame.src = isDark ? '/mockup-light/' : '/mockup-dark/';
 }
 
 // ── Tabs for recording modes ──────────────────────────────────────────────

@@ -5,7 +5,7 @@ export default function Presentacion() {
   return (
     <Layout title="Presentación" description="Landing page de MonitorCenter">
       <iframe
-        src="/landing.html"
+        src="/landing-app/"
         style={{
           width: '100%',
           height: 'calc(100vh - 60px)',
