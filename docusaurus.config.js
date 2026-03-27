@@ -111,6 +111,11 @@ const config = {
             label: 'Presentación',
             position: 'left',
           },
+          {
+            to: '/integradores',
+            label: 'Integradores',
+            position: 'left',
+          },
           // Versión móvil del enlace de partnership
           {
             type: 'html',
