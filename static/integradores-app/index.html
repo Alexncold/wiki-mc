@@ -12,7 +12,7 @@
 /* ══════════════════════════════════════════
    RESET & BASE
 ══════════════════════════════════════════ */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; transition: background-color 0.25s, border-color 0.25s, color 0.25s; }
 
 :root {
   --blue:        #5685cb;
@@ -65,6 +65,20 @@ img { display: block; max-width: 100%; }
   margin: 0 auto;
   padding: 0 32px;
 }
+
+/* ══════════════════════════════════════════
+   FADE-IN ON SCROLL
+══════════════════════════════════════════ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s, transform .6s;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
 
 /* ══════════════════════════════════════════
    NAVBAR
@@ -1309,7 +1323,7 @@ footer {
 <div class="hero">
   <div class="hero-dot-grid"></div>
   <div class="container">
-    <div class="hero-inner">
+    <div class="hero-inner fade-in">
       <div>
         <div class="hero-badge">
           <span></span>
@@ -1401,7 +1415,7 @@ footer {
 <!-- ══ S2: PROOF BAR ══ -->
 <div class="proof-bar">
   <div class="container">
-    <div class="proof-inner">
+    <div class="proof-inner fade-in">
       <div class="proof-item">
         <div class="proof-num">10+</div>
         <div class="proof-label">Años en el mercado</div>
@@ -1425,7 +1439,7 @@ footer {
     <div class="section-title" style="text-align:center;">¿Solo ganas cuando instalas?</div>
     <div class="section-sub" style="text-align:center; margin:0 auto;">Tu mayor activo son los clientes que ya confiaron en ti. Pero una vez terminada la instalación, los ingresos se cortan.</div>
     <div class="problema-grid">
-      <div class="pain-list">
+      <div class="pain-list fade-in">
         <div class="pain-item">
           <div class="pain-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
@@ -1464,7 +1478,7 @@ footer {
         </div>
       </div>
 
-      <div class="problema-visual">
+      <div class="problema-visual fade-in">
         <div class="funnel-step">
           <div class="funnel-step-label">Ingreso por instalación</div>
           <div class="funnel-step-value">$1.200 · único</div>
@@ -1487,12 +1501,12 @@ footer {
 <!-- ══ S4: OPORTUNIDAD ══ -->
 <section class="alt" id="beneficios">
   <div class="container">
-    <div class="section-head center">
+    <div class="section-head center fade-in">
       <div class="section-eyebrow">La oportunidad</div>
       <div class="section-title">Tus clientes ya tienen cámaras.<br><em>Ya tienes su confianza.</em></div>
       <p class="section-sub center">Solo falta agregar el servicio que convierte una instalación en un ingreso recurrente.</p>
     </div>
-    <div class="oport-cards">
+    <div class="oport-cards fade-in">
       <div class="oport-card featured">
         <div class="oport-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
@@ -1524,7 +1538,7 @@ footer {
 <!-- ══ S5: CÓMO FUNCIONA ══ -->
 <section id="como-funciona">
   <div class="container">
-    <div class="section-head center">
+    <div class="section-head center fade-in">
       <div class="section-eyebrow">Cómo funciona</div>
       <div class="section-title">Empieza en <em>3 pasos</em></div>
       <p class="section-sub center">Sin inversión inicial. Sin infraestructura. Sin complicaciones técnicas.</p>
@@ -1768,7 +1782,7 @@ footer {
 <!-- ══ S9: CTA FINAL ══ -->
 <div class="cta-section" id="cta">
   <div class="container">
-    <div class="cta-inner">
+    <div class="cta-inner fade-in">
       <div class="cta-eyebrow">Programa de integradores</div>
       <h2 class="cta-title">Únete al programa.<br><em>Empieza a cobrar este mes.</em></h2>
       <p class="cta-sub">Regístrate gratis, conecta tus primeros clientes y comienza a generar ingresos recurrentes sin inversión inicial.</p>
@@ -1841,6 +1855,18 @@ footer {
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── Fade-in on scroll ────────────────────────────────────────────────────
+var fadeObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(function(el) {
+  fadeObserver.observe(el);
+});
 
 // ── Hide/show navbar on scroll ──────────────────────────────────────────
 var navbar = document.querySelector('nav');
