@@ -279,6 +279,7 @@ nav.nav-hidden {
   transition: border-color 0.2s, color 0.2s;
 }
 .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+.hero-note--below { display: none; }
 .hero-note {
   margin-top: 20px;
   font-size: 13px;
@@ -1298,6 +1299,226 @@ footer {
 }
 .footer-links a:hover { color: var(--blue); }
 .footer-copy { font-size: 13px; color: var(--text-3); }
+#hamburger-btn { display: none; }
+#mobile-menu { display: none; }
+
+/* ══════════════════════════════════════════
+   MOBILE
+══════════════════════════════════════════ */
+@media (max-width: 768px) {
+  nav {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    transform: none;
+    padding: 0 16px;
+    border-radius: 16px;
+  }
+  .nav-links {
+    display: none;
+  }
+  #hamburger-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-left: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    width: 36px;
+    height: 36px;
+  }
+  #hamburger-btn span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all .25s ease;
+  }
+  #hamburger-btn.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  #hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger-btn.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  #mobile-menu {
+    display: none;
+    position: fixed;
+    top: 76px;
+    left: 12px;
+    right: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    z-index: 99;
+    padding: 8px;
+    flex-direction: column;
+    gap: 2px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  #mobile-menu.open {
+    display: flex;
+  }
+  #mobile-menu a {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-2);
+    padding: 12px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background .2s, color .2s;
+  }
+  #mobile-menu a:hover {
+    background: var(--surface);
+    color: var(--text);
+  }
+  .hero h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-inner > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-sub {
+    text-align: center;
+  }
+  .hero-btns {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .btn-primary, .btn-outline {
+    font-size: 13px;
+    padding: 12px 18px;
+  }
+  .hero-note {
+    display: none;
+  }
+  .hero-note--below {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-3);
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-visual {
+    width: 100%;
+  }
+  .proof-inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .proof-item {
+    padding: 0 16px;
+    border-right: 1px solid var(--border);
+  }
+  .proof-item:last-child {
+    border-right: none;
+  }
+  .proof-num {
+    font-size: 28px;
+  }
+  .proof-label {
+    font-size: 11px;
+  }
+  .problema-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+  .pain-list {
+    order: 1;
+  }
+  .problema-visual {
+    order: 2;
+  }
+  .oport-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .oport-card {
+    text-align: center;
+    align-items: center;
+  }
+  .oport-icon {
+    margin: 0 auto;
+  }
+  .steps-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  .steps-connector {
+    display: none;
+  }
+  .step-item {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 20px;
+    row-gap: 4px;
+    text-align: left;
+    padding: 0;
+  }
+  .step-num {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  .step-title {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .step-text {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .tecnico-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+  }
+  .tecnico-grid > div:first-child {
+    order: 1;
+    text-align: center;
+  }
+  .tecnico-grid > div:first-child .section-eyebrow,
+  .tecnico-grid > div:first-child .section-title {
+    text-align: center;
+  }
+  .tecnico-grid > div:first-child .tec-list {
+    text-align: left;
+  }
+  .panel-mock {
+    order: 2;
+    margin-top: 16px;
+  }
+}
 
 </style>
 </head>
@@ -1316,11 +1537,21 @@ footer {
     <li><a href="#comisiones">Comisiones</a></li>
     <li><a href="#cta">Únete</a></li>
   </ul>
+  <button id="hamburger-btn" onclick="toggleMobileMenu()" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
   <button id="theme-btn" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema">
     <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     <svg id="icon-sun" style="display:none" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
   </button>
 </nav>
+<div id="mobile-menu">
+  <a href="#problema" onclick="closeMobileMenu()">El Problema</a>
+  <a href="#beneficios" onclick="closeMobileMenu()">Oportunidad</a>
+  <a href="#como-funciona" onclick="closeMobileMenu()">Cómo funciona</a>
+  <a href="#comisiones" onclick="closeMobileMenu()">Comisiones</a>
+  <a href="#cta" onclick="closeMobileMenu()">Únete</a>
+</div>
 
 <!-- ══ S1: HERO ══ -->
 <div class="hero">
@@ -1341,10 +1572,6 @@ footer {
           </a>
           <a href="#como-funciona" class="btn-outline">Ver cómo funciona</a>
         </div>
-        <p class="hero-note">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1a6 6 0 100 12A6 6 0 007 1zm0 3v4m0 2v.5" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/></svg>
-          Sin contrato de permanencia · Activación gratuita
-        </p>
       </div>
 
       <div class="hero-visual">
@@ -1397,7 +1624,7 @@ footer {
             <div class="dash-stats">
               <div class="dash-stat">
                 <div class="dash-stat-num">6</div>
-                <div class="dash-stat-label">Cámaras activas</div>
+                <div class="dash-stat-label">Cámaras</div>
               </div>
               <div class="dash-stat">
                 <div class="dash-stat-num">30d</div>
@@ -1405,12 +1632,16 @@ footer {
               </div>
               <div class="dash-stat">
                 <div class="dash-stat-num">×16</div>
-                <div class="dash-stat-label">Velocidad replay</div>
+                <div class="dash-stat-label">Velocidad</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <p class="hero-note hero-note--below">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1a6 6 0 100 12A6 6 0 007 1zm0 3v4m0 2v.5" stroke="#9ca3af" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Sin contrato de permanencia · Activación gratuita
+      </p>
     </div>
   </div>
 </div>
@@ -1884,6 +2115,16 @@ window.addEventListener('scroll', function() {
   lastScrollY = currentScrollY;
 }, { passive: true });
 
+function toggleMobileMenu() {
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.classList.toggle('open');
+  menu.classList.toggle('open');
+}
+function closeMobileMenu() {
+  document.getElementById('hamburger-btn').classList.remove('open');
+  document.getElementById('mobile-menu').classList.remove('open');
+}
 function toggleTheme() {
   var html = document.documentElement;
   var isDark = html.getAttribute('data-theme') === 'dark';
